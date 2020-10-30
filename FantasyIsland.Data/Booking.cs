@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FantasyIsland.Models
+namespace FantasyIsland.Data
 {
-    public class Class1
+    public class Booking
     {
-
-        //I like cheese - J
     }
 }
