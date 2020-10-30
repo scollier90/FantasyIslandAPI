@@ -8,5 +8,6 @@ namespace FantasyIsland.Models
 {
     public class Class1
     {
+        //comment push brittany branch
     }
 }
