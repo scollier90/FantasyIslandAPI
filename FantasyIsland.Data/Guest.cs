@@ -18,6 +18,5 @@ namespace FantasyIsland.Data
         [Required]
         public string Email { get; set; }
 
-        //comment push develop
     }
 }
