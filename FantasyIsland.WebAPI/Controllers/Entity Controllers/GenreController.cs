@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using System.Net.Http;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -21,10 +22,17 @@ using FantasyIsland.Data;
 using FantasyIsland.Models;
 using FantasyIsland.Models.GenreModels;
 
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+
+
 namespace FantasyIsland.WebAPI.Controllers
 {
     [Authorize]
     public class GenreController : ApiController
+
     {//must say User vs Genre
         private GenreService CreateGenreService()
         {
@@ -81,6 +89,3 @@ namespace FantasyIsland.WebAPI.Controllers
 
             return Ok();
         }
-
-    }
-}

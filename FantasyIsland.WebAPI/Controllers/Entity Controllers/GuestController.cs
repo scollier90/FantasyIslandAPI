@@ -1,3 +1,4 @@
+
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -20,11 +21,16 @@ using FantasyIsland.Services;
 using FantasyIsland.Data;
 using FantasyIsland.Models;
 
+
+
+
 namespace FantasyIsland.WebAPI.Controllers
 {
     [Authorize]
     public class GuestController : ApiController
-    {//must say User vs guest
+
+    {
+
         private GuestService CreateGuestService()
         {
             var guestId = Guid.Parse(User.Identity.GetUserId());
@@ -52,6 +58,7 @@ namespace FantasyIsland.WebAPI.Controllers
             return Ok();
         }
 
+
         public IHttpActionResult Get(int id)
         {
             GuestService guestService = CreateGuestService();
@@ -62,6 +69,7 @@ namespace FantasyIsland.WebAPI.Controllers
         public IHttpActionResult Put(GuestEdit guest)
         {
             if(!ModelState.IsValid)
+
                 return BadRequest(ModelState);
 
             var service = CreateGuestService();
