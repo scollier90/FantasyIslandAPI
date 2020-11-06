@@ -1,20 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-
-using System.Globalization;
-
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FantasyIsland.Data
+namespace FantasyIsland.Models.GenreModels
 {
-    public class Admin : Guest
+    public class GenreCreate
     {
-        [Key]
-        public int AdminId { get; set; }
-
-
+        [Required]
+        public string GenreType { get; set; }
+        public int DestId { get; set; }
     }
 }

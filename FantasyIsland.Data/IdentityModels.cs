@@ -34,7 +34,11 @@ namespace FantasyIsland.Data
         }
 
         public DbSet<Guest> Guests { get; set; }
+
+        public DbSet<Genre> Genres { get; set; }
+
         public DbSet<Transportation> Transportations { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

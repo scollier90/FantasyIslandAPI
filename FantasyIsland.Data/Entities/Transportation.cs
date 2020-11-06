@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 
 namespace FantasyIsland.Data
 {
+
     public class Transportation
+
     {
         [Key]
         public int TransId { get; set; }
@@ -16,7 +18,9 @@ namespace FantasyIsland.Data
         public string TransType { get; set; }
         [Required]
         [ForeignKey(nameof(Destination))]
+
         public int DestId { get; set; }
+
         public virtual Destination Destination { get; set; }
     }
 }

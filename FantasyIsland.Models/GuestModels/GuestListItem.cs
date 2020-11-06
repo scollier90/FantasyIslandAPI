@@ -5,18 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FantasyIsland.Data
+namespace FantasyIsland.Models
 {
-    public class Guest
+    public class GuestListItem
     {
-        [Key]
         public int GuestId { get; set; }
-        [Required]
-        public Guid Id { get; set; }
-        [Required]
         public string Name { get; set; }
-        [Required]
-        public string Email { get; set; }
-
+        //[Display(Name="Created")]
+        //public DateTimeOffset CreatedUtc { get; set; }
     }
 }
