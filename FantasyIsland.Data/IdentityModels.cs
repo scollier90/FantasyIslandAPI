@@ -33,7 +33,8 @@ namespace FantasyIsland.Data
             return new ApplicationDbContext();
         }
 
-        public DbSet<Guest> Guest { get; set; }
+        public DbSet<Guest> Guests { get; set; }
+        public DbSet<Destination> Destinations { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
