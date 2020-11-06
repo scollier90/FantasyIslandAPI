@@ -10,7 +10,7 @@ namespace FantasyIsland.Services
 {
     public class GenreService
     {
-        private readonly int _GenreId = -1;
+        //private readonly int _GenreId = -1;
         public GenreService()
         { }
         
@@ -37,7 +37,7 @@ namespace FantasyIsland.Services
                 var query =
                     ctx
                     .Genres
-                    .Where(e => e.GenreId == _GenreId)
+                    .Where(e => e.GenreId == e.GenreId)
                     .Select(
                         e =>
                         new GenreListItem
@@ -58,7 +58,7 @@ namespace FantasyIsland.Services
                 var entity =
                      ctx
                     .Genres
-                    .Single(e => e.GenreId == id && e.GenreId == _GenreId);
+                    .Single(e => e.GenreId == id);
                 return
                     new GenreDetail
                     {
@@ -76,7 +76,7 @@ namespace FantasyIsland.Services
                 var entity =
                 ctx
                    .Genres
-                   .Single(e => e.GenreId == model.GenreId && e.GenreId == _GenreId);
+                   .Single(e => e.GenreId == model.GenreId);
 
                 entity.GenreType = model.GenreType;
                 entity.GenreId = model.GenreId;
@@ -88,14 +88,14 @@ namespace FantasyIsland.Services
 
         //Delete Genre based on matching Genre id and the guid id
 
-        public bool DeleteGenre(int GenreId)
+        public bool DeleteGenre(int genreId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                 ctx
                    .Genres
-                   .Single(e => e.GenreId == GenreId && e.GenreId == _GenreId);
+                   .Single(e => e.GenreId == genreId);
 
                 ctx.Genres.Remove(entity);
                 return ctx.SaveChanges() == 1;
