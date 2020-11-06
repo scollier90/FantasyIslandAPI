@@ -1,5 +1,6 @@
 ﻿using FantasyIsland.Data;
 using FantasyIsland.Models;
+using FantasyIsland.Models.Guest;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,6 @@ namespace FantasyIsland.Services
     public class GuestService
     {
         private readonly Guid _guestId;
-
         public GuestService(Guid guestId)
         {
             _guestId = guestId;
@@ -39,25 +39,16 @@ namespace FantasyIsland.Services
             {
                 var query =
                     ctx
-                    .Guests
-                    .Where(e => e.Id == _guestId)
-                    .Select(
-                        e =>
-<<<<<<< HEAD
-                            new GuestListItem
-                            {
-                                GuestId = e.GuestId,
-                                Name = e.Name,
-                            }
-                    );
-=======
-                        new GuestListItem
-                        {
-                            GuestId = e.GuestId,
-                            Name = e.Name,
-                        }
+                        .Guests
+                        .Where(e => e.Id == _guestId)
+                        .Select(
+                            e =>
+                                new GuestListItem
+                                {
+                                    GuestId = e.GuestId,
+                                    Name = e.Name
+                                }
                         );
->>>>>>> develop
                 return query.ToArray();
             }
         }
@@ -67,50 +58,27 @@ namespace FantasyIsland.Services
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
-<<<<<<< HEAD
                     ctx
-                     .Guests
-                     .Single(e => e.GuestId == id && e.Id == _guestId);
-                return
-                 new GuestDetail
-                 {
-                     GuestId = entity.GuestId,
-                     Name = entity.Name,
-                     Email = entity.Email
-                 };
-            }
-        }
-
-=======
-                     ctx
-                    .Guests
-                    .Single(e => e.GuestId == id && e.Id == _guestId);
+                        .Guests
+                        .Single(e => e.GuestId == id && e.Id == _guestId);
                 return
                     new GuestDetail
                     {
                         GuestId = entity.GuestId,
                         Name = entity.Name,
-                        Email = entity.Email,
+                        Email = entity.Email
                     };
             }
         }
->>>>>>> develop
-        //Find guest and Update Information given (name/email only)
+
         public bool UpdateGuest(GuestEdit model)
         {
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var entity =
-<<<<<<< HEAD
                     ctx
-                     .Guests
-                     .Single(e => e.GuestId == model.GuestId && e.Id == _guestId);
-=======
-                ctx
-                   .Guests
-                   .Single(e => e.GuestId == model.GuestId && e.Id == _guestId);
->>>>>>> develop
-
+                        .Guests
+                        .Single(e => e.GuestId == model.GuestId && e.Id == _guestId);
                 entity.Name = model.Name;
                 entity.Email = model.Email;
 
@@ -118,27 +86,17 @@ namespace FantasyIsland.Services
             }
         }
 
-        //Delete guest based on matching guest id and the guid id
-<<<<<<< HEAD
-=======
-
->>>>>>> develop
         public bool DeleteGuest(int guestId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
-<<<<<<< HEAD
                     ctx
-                    .Guests
-                    .Single(e => e.GuestId == guestId && e.Id == _guestId);
-=======
-                ctx
-                   .Guests
-                   .Single(e => e.GuestId == guestId && e.Id == _guestId);
->>>>>>> develop
-
+                        .Guests
+                        .Single(e => e.GuestId == guestId && e.Id == _guestId);
+                
                 ctx.Guests.Remove(entity);
+
                 return ctx.SaveChanges() == 1;
             }
         }

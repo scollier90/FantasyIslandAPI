@@ -61,21 +61,33 @@
     <Compile Include="AdminModels\AdminDetail.cs" />
     <Compile Include="AdminModels\AdminEdit.cs" />
     <Compile Include="AdminModels\AdminListItem.cs" />
+
+    <Compile Include="GenreModels\GenreCreate.cs" />
+    <Compile Include="GenreModels\GenreDetail.cs" />
+    <Compile Include="GenreModels\GenreEdit.cs" />
+    <Compile Include="GenreModels\GenreListItem.cs" />
     <Compile Include="GuestModels\GuestCreate.cs" />
     <Compile Include="GuestModels\GuestDetail.cs" />
     <Compile Include="GuestModels\GuestEdit.cs" />
     <Compile Include="GuestModels\GuestListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transportation\TransCreate.cs" />
+    <Compile Include="Transportation\TransDetail.cs" />
+    <Compile Include="Transportation\TransEdit.cs" />
+    <Compile Include="Transportation\TransListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    
+    <Folder Include="GenreModels\" />
+    <Folder Include="AdminModels\" />
     <Folder Include="BookingModels\" />
     <Folder Include="DestinationModels\" />
-    <Folder Include="GenreModels\" />
     <Folder Include="TransportationModels\" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

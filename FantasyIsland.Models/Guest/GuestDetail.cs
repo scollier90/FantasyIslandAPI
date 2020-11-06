@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FantasyIsland.Models
+namespace FantasyIsland.Models.Guest
 {
-
-    public class GuestEdit
+    public class GuestDetail
     {
         public int GuestId { get; set; }
-
         public string Name { get; set; }
         public string Email { get; set; }
     }
