@@ -11,5 +11,6 @@ namespace FantasyIsland.Models.GenreModels
     {
         [Required]
         public string GenreType { get; set; }
+        public int DestId { get; set; }
     }
 }

@@ -10,6 +10,7 @@ namespace FantasyIsland.Models.GenreModels
     {
         public string GenreType { get; set; }
         public int GenreId { get; set; }
+        public int DestId { get; set; }
 
     }
 }
