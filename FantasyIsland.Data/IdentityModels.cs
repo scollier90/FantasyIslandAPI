@@ -34,6 +34,7 @@ namespace FantasyIsland.Data
         }
 
         public DbSet<Guest> Guests { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
         public DbSet<Genre> Genres { get; set; }
 

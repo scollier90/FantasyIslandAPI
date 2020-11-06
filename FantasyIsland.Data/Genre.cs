@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FantasyIsland.Models
+namespace FantasyIsland.Data
 {
-    public class GuestCreate
+    public class Genre
     {
+        [Key]
+        public int GenreId { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string GenreType { get; set; }
 
-        [Required]
-        public string Email { get; set; }
     }
 }

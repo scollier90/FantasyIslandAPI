@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace FantasyIsland.Models
 {
-
-    public class GuestEdit
+    public class AdminEdit
     {
-        public int GuestId { get; set; }
-
+        public int AdminId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
     }
