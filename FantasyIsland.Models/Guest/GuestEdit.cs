@@ -4,16 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FantasyIsland.Models
+namespace FantasyIsland.Models.Guest
 {
-    public class GuestEdit
-    {
-        public int GuestId { get; set; }
-
-    public class AdminEdit
-    {
-        public int AdminId { get; set; }
-
     public class GuestEdit
     {
         public int GuestId { get; set; }

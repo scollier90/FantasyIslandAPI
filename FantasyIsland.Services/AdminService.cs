@@ -3,101 +3,86 @@ using FantasyIsland.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Schema;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace FantasyIsland.Services
 {
-    public class GuestService
+    public class AdminService
     {
-        private readonly Guid _guestId;
-        public GuestService(Guid guestId)
+        private readonly Guid _adminId;
+
+        public AdminService(Guid adminId)
         {
-            _guestId = guestId;
+            _adminId = adminId;
         }
 
-        public bool CreateGuest(GuestCreate model)
+        //Adds a new admin to table
+        public bool CreateAdmin(AdminCreate model)
         {
             var entity =
-                new Guest()
+                new Admin()
                 {
-                    Id = _guestId,
+                    Id = _adminId,
                     Name = model.Name,
                     Email = model.Email,
                 };
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Guests.Add(entity);
+                ctx.Admins.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public IEnumerable<GuestListItem> GetGuests()
+        //Return array of all admins in table
+        public IEnumerable<AdminListItem> GetAdmins()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
-                    .Guests
-                    .Where(e => e.Id == _guestId)
+                    .Admins
+                    .Where(e => e.Id == _adminId)
                     .Select(
                         e =>
-
-                            new GuestListItem
+                            new AdminListItem
                             {
-                                GuestId = e.GuestId,
+                                AdminId = e.AdminId,
                                 Name = e.Name,
                             }
                     );
-
-                        new GuestListItem
-                        {
-                            GuestId = e.GuestId,
-                            Name = e.Name,
-                        }
-                        );
                 return query.ToArray();
             }
         }
 
-        public GuestDetail GetGuestById(int id)
+        //Get specific admin by ID
+        public AdminDetail GetAdminById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
-
                     ctx
-                    .Guests
-                    .Single(e => e.GuestId ==id && e.Id == _guestId);
-
-
-                    ctx
-                     .Guests
-                     .Single(e => e.GuestId == id && e.Id == _guestId);
-
+                     .Admins
+                     .Single(e => e.GuestId == id && e.Id == _adminId);
                 return
-                 new GuestDetail
+                 new AdminDetail
                  {
-                     GuestId = entity.GuestId,
+                     AdminId = entity.AdminId,
                      Name = entity.Name,
                      Email = entity.Email
                  };
             }
         }
-        
-        //Find guest and Update Information given (name/email only)
-        public bool UpdateGuest(GuestEdit model)
+
+        //Find admin and Update Information given (name/email only)
+        public bool UpdateAdmin(AdminEdit model)
         {
             using(var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                     .Guests
-                     .Single(e => e.GuestId == model.GuestId && e.Id == _guestId);
+                     .Admins
+                     .Single(e => e.GuestId == model.AdminId && e.Id == _adminId);
 
                 entity.Name = model.Name;
                 entity.Email = model.Email;
@@ -106,18 +91,16 @@ namespace FantasyIsland.Services
             }
         }
 
-
-        public bool DeleteGuest(int guestId)
+        //Delete admin based on matching guest id and the guid id
+        public bool DeleteAdmin(int adminId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
-
                     ctx
-                    .Guests
-                    .Single(e => e.GuestId == guestId && e.Id == _guestId);
-
-                ctx.Guests.Remove(entity);
+                    .Admins
+                    .Single(e => e.AdminId == adminId && e.Id == _adminId);
+                ctx.Admins.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }
         }

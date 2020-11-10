@@ -58,8 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DestService.cs" />
+    <Compile Include="AdminService.cs" />
+    <Compile Include="GenreService.cs" />
     <Compile Include="GuestService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\TransService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -67,11 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FantasyIsland.Data\FantasyIsland.Data.csproj">
-      <Project>{F6E36FE6-C0C4-4801-9E3D-77BDA6DFDE37}</Project>
+      <Project>{f6e36fe6-c0c4-4801-9e3d-77bda6dfde37}</Project>
       <Name>FantasyIsland.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\FantasyIsland.Models\FantasyIsland.Models.csproj">
-      <Project>{8CE1FD09-F0AD-4ED0-860D-F8983A0C5E51}</Project>
+      <Project>{8ce1fd09-f0ad-4ed0-860d-f8983a0c5e51}</Project>
       <Name>FantasyIsland.Models</Name>
     </ProjectReference>
   </ItemGroup>

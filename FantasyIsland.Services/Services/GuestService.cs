@@ -1,12 +1,9 @@
 ﻿using FantasyIsland.Data;
 using FantasyIsland.Models;
+using FantasyIsland.Models.Guest;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Schema;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -42,23 +39,15 @@ namespace FantasyIsland.Services
             {
                 var query =
                     ctx
-                    .Guests
-                    .Where(e => e.Id == _guestId)
-                    .Select(
-                        e =>
-
-                            new GuestListItem
-                            {
-                                GuestId = e.GuestId,
-                                Name = e.Name,
-                            }
-                    );
-
-                        new GuestListItem
-                        {
-                            GuestId = e.GuestId,
-                            Name = e.Name,
-                        }
+                        .Guests
+                        .Where(e => e.Id == _guestId)
+                        .Select(
+                            e =>
+                                new GuestListItem
+                                {
+                                    GuestId = e.GuestId,
+                                    Name = e.Name
+                                }
                         );
                 return query.ToArray();
             }
@@ -69,36 +58,27 @@ namespace FantasyIsland.Services
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
-
                     ctx
-                    .Guests
-                    .Single(e => e.GuestId ==id && e.Id == _guestId);
-
-
-                    ctx
-                     .Guests
-                     .Single(e => e.GuestId == id && e.Id == _guestId);
-
+                        .Guests
+                        .Single(e => e.GuestId == id && e.Id == _guestId);
                 return
-                 new GuestDetail
-                 {
-                     GuestId = entity.GuestId,
-                     Name = entity.Name,
-                     Email = entity.Email
-                 };
+                    new GuestDetail
+                    {
+                        GuestId = entity.GuestId,
+                        Name = entity.Name,
+                        Email = entity.Email
+                    };
             }
         }
-        
-        //Find guest and Update Information given (name/email only)
+
         public bool UpdateGuest(GuestEdit model)
         {
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                     .Guests
-                     .Single(e => e.GuestId == model.GuestId && e.Id == _guestId);
-
+                        .Guests
+                        .Single(e => e.GuestId == model.GuestId && e.Id == _guestId);
                 entity.Name = model.Name;
                 entity.Email = model.Email;
 
@@ -106,18 +86,17 @@ namespace FantasyIsland.Services
             }
         }
 
-
         public bool DeleteGuest(int guestId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
-
                     ctx
-                    .Guests
-                    .Single(e => e.GuestId == guestId && e.Id == _guestId);
-
+                        .Guests
+                        .Single(e => e.GuestId == guestId && e.Id == _guestId);
+                
                 ctx.Guests.Remove(entity);
+
                 return ctx.SaveChanges() == 1;
             }
         }

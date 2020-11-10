@@ -5,14 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FantasyIsland.Models
+namespace FantasyIsland.Models.GenreModels
 {
-    public class GuestCreate
+    public class GenreCreate
     {
         [Required]
-        public string Name { get; set; }
-
-        [Required]
-        public string Email { get; set; }
+        public string GenreType { get; set; }
+        public int DestId { get; set; }
     }
 }

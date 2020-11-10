@@ -17,5 +17,9 @@ namespace FantasyIsland.Data
         public string Name { get; set; }
         [Required]
         public string Email { get; set; }
+<<<<<<< HEAD:FantasyIsland.Data/Guest.cs
+=======
+
+>>>>>>> 68b4f798ad41af0d8f2519c8355cd7f23a2bc990:FantasyIsland.Data/Entities/Guest.cs
     }
 }
