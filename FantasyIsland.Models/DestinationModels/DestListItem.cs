@@ -11,6 +11,5 @@ namespace FantasyIsland.Models.DestinationModels
         public int DestId { get; set; }
         public string DestName { get; set; }
         public int GenreId { get; set; }
-
     }
 }

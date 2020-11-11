@@ -48,7 +48,7 @@ namespace FantasyIsland.Services
                             DestName = e.DestName,
                             GenreId = e.GenreId,
                         }
-                   );
+                    );
                 return query.ToArray();
             }
         }

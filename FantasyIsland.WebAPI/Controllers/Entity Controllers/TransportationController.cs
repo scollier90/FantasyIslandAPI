@@ -12,7 +12,7 @@ namespace FantasyIsland.WebAPI.Controllers
     [Authorize]
     public class TransportationController : ApiController
     {
-        private TransService CreateTranService()
+        private TransService CreateTransService()
         {
             var transService = new TransService();
             return transService;
@@ -20,7 +20,7 @@ namespace FantasyIsland.WebAPI.Controllers
 
         public IHttpActionResult Get()
         {
-            TransService transService = CreateTranService();
+            TransService transService = CreateTransService();
             var transportations = transService.GetTransportations();
             return Ok(transportations);
         }
@@ -30,7 +30,7 @@ namespace FantasyIsland.WebAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var service = CreateTranService();
+            var service = CreateTransService();
 
             if (!service.CreateTrans(transportation))
                 return InternalServerError();
@@ -40,7 +40,7 @@ namespace FantasyIsland.WebAPI.Controllers
 
         public IHttpActionResult Get(int id)
         {
-            TransService transService = CreateTranService();
+            TransService transService = CreateTransService();
             var transportation = transService.GetTransById(id);
             return Ok(transportation);
         }
@@ -50,7 +50,7 @@ namespace FantasyIsland.WebAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var service = CreateTranService();
+            var service = CreateTransService();
 
             if (!service.UpdateTransportations(transportation))
                 return InternalServerError();
@@ -60,7 +60,7 @@ namespace FantasyIsland.WebAPI.Controllers
 
         public IHttpActionResult Delete(int id)
         {
-            var service = CreateTranService();
+            var service = CreateTransService();
 
             if (!service.DeleteTransportations(id))
                 return InternalServerError();

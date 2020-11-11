@@ -57,10 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DestService.cs" />
-    <Compile Include="AdminService.cs" />
-    <Compile Include="GenreService.cs" />
-    <Compile Include="GuestService.cs" />
+    <Compile Include="Services\DestService.cs" />
+    <Compile Include="Services\AdminService.cs" />
+    <Compile Include="Services\GenreService.cs" />
+    <Compile Include="Services\GuestService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\TransService.cs" />
   </ItemGroup>

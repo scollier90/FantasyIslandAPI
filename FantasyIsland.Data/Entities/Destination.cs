@@ -12,13 +12,13 @@ namespace FantasyIsland.Data
     {
         [Key]
         public int DestId { get; set; }
+
         [Required]
         public string DestName { get; set; }
-        [Required]
 
+        [Required]
         [ForeignKey(nameof(Genre))]
         public int GenreId { get; set; }
-
         public virtual Genre Genre { get; set; }
     }
 }

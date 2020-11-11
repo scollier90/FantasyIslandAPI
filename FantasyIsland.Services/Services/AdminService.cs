@@ -17,7 +17,6 @@ namespace FantasyIsland.Services
             _adminId = adminId;
         }
 
-        //Adds a new admin to table
         public bool CreateAdmin(AdminCreate model)
         {
             var entity =
@@ -34,7 +33,6 @@ namespace FantasyIsland.Services
             }
         }
 
-        //Return array of all admins in table
         public IEnumerable<AdminListItem> GetAdmins()
         {
             using (var ctx = new ApplicationDbContext())
@@ -55,7 +53,6 @@ namespace FantasyIsland.Services
             }
         }
 
-        //Get specific admin by ID
         public AdminDetail GetAdminById(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -74,7 +71,6 @@ namespace FantasyIsland.Services
             }
         }
 
-        //Find admin and Update Information given (name/email only)
         public bool UpdateAdmin(AdminEdit model)
         {
             using(var ctx = new ApplicationDbContext())
@@ -91,7 +87,6 @@ namespace FantasyIsland.Services
             }
         }
 
-        //Delete admin based on matching guest id and the guid id
         public bool DeleteAdmin(int adminId)
         {
             using (var ctx = new ApplicationDbContext())

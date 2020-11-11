@@ -13,9 +13,5 @@ namespace FantasyIsland.Models
         public int GuestId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        //[Display(Name="Created")]
-        //public DateTimeOffset CreatedUtc { get; set; }
-        //[Display(Name = "Modified")]
-        //public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }
