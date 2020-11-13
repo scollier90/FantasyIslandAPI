@@ -33,9 +33,9 @@ namespace FantasyIsland.Data
             return new ApplicationDbContext();
         }
 
-        public DbSet<Guest> Guests { get; set; }
+        //public DbSet<Guest> Guests { get; set; }
         public DbSet<Destination> Destinations { get; set; }
-        public DbSet<Admin> Admins { get; set; }
+        //public DbSet<Admin> Admins { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Transportation> Transportations { get; set; }
 

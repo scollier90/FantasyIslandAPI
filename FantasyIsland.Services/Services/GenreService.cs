@@ -43,8 +43,7 @@ namespace FantasyIsland.Services
                         new GenreListItem
                         {
                             GenreId = e.GenreId,
-                            GenreType = e.GenreType,
-                            DestId = e.DestId,
+                            GenreType = e.GenreType
                         }
                     );
                 return query.ToArray();
@@ -64,7 +63,6 @@ namespace FantasyIsland.Services
                     {
                         GenreId = entity.GenreId,
                         GenreType = entity.GenreType,
-                        DestId = entity.DestId,
                     };
             }
         }
@@ -80,7 +78,6 @@ namespace FantasyIsland.Services
 
                 entity.GenreType = model.GenreType;
                 entity.GenreId = model.GenreId;
-                entity.DestId = model.DestId;
 
                 return ctx.SaveChanges() == 1;
             }

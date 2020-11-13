@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace FantasyIsland.WebAPI.Models
+namespace FantasyIsland.WebAPI.Data
 {
     // Models used as parameters to AccountController actions.
 

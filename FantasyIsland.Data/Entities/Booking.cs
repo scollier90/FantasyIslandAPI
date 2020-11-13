@@ -14,17 +14,14 @@ namespace FantasyIsland.Data
         [Key]
         public int BookingId { get; set; }
 
-        [Required]
-        [ForeignKey(nameof(Guest))]
-        public int GuestId { get; set; }
-        public virtual Guest Guest { get; set; }
+        [ForeignKey(nameof(ApplicationUser))]
+        public int UserId { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
-        [Required]
         [ForeignKey(nameof(Destination))]
         public int DestId { get; set; }
         public virtual Destination Destination { get; set; }
 
-        [Required]
         [ForeignKey(nameof(Transportation))]
         public int TransId { get; set; }
         public virtual Transportation Transportation { get; set; }

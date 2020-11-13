@@ -21,6 +21,7 @@ namespace FantasyIsland.Services.Services
                 new Transportation()
                 {
                     TransType = model.TransType,
+                    DestId = model.DestId
                 };
             using (var ctx = new ApplicationDbContext())
             {

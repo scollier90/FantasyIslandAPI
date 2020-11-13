@@ -61,10 +61,6 @@
     <Compile Include="DestinationModels\DestDetail.cs" />
     <Compile Include="DestinationModels\DestEdit.cs" />
     <Compile Include="DestinationModels\DestListItem.cs" />
-    <Compile Include="AdminModels\AdminCreate.cs" />
-    <Compile Include="AdminModels\AdminDetail.cs" />
-    <Compile Include="AdminModels\AdminEdit.cs" />
-    <Compile Include="AdminModels\AdminListItem.cs" />
     <Compile Include="GenreModels\GenreCreate.cs" />
     <Compile Include="GenreModels\GenreDetail.cs" />
     <Compile Include="GenreModels\GenreEdit.cs" />

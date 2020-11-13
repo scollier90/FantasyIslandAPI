@@ -13,7 +13,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using FantasyIsland.WebAPI.Models;
+using FantasyIsland.WebAPI.Data;
 using FantasyIsland.WebAPI.Providers;
 using FantasyIsland.WebAPI.Results;
 using FantasyIsland.Services;

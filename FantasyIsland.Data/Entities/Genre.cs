@@ -16,11 +16,5 @@ namespace FantasyIsland.Data
         public int GenreId { get; set; }
         [Required]
         public string GenreType { get; set; }
-
-        [Required]
-        [ForeignKey(nameof(Destination))]
-        public int DestId { get; set; }
-        public virtual Destination Destination { get; set; }
-
     }
 }

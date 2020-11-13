@@ -23,6 +23,7 @@ namespace FantasyIsland.Services
                 new Destination()
                 {
                     DestName = model.DestName,
+                    GenreId = model.GenreId
                 };
             using (var ctx = new ApplicationDbContext())
             {
