@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FantasyIsland.WebAPI.Models
+namespace FantasyIsland.WebAPI.Data
 {
     // Models returned by AccountController actions.
 

@@ -3,7 +3,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
-using FantasyIsland.WebAPI.Models;
+using FantasyIsland.WebAPI.Data;
+using FantasyIsland.Data;
 
 namespace FantasyIsland.WebAPI
 {
