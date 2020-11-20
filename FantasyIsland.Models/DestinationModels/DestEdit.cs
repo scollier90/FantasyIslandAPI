@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FantasyIsland.Models.DestinationModels
+namespace FantasyIsland.Models.BookingModels
 {
     public class DestEdit
     {

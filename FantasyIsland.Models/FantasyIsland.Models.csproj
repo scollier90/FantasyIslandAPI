@@ -57,6 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookingModels\BookingCreate.cs" />
+    <Compile Include="BookingModels\BookingDetail.cs" />
+    <Compile Include="BookingModels\BookingEdit.cs" />
+    <Compile Include="BookingModels\BookingListItem.cs" />
     <Compile Include="DestinationModels\DestCreate.cs" />
     <Compile Include="DestinationModels\DestDetail.cs" />
     <Compile Include="DestinationModels\DestEdit.cs" />
@@ -79,9 +83,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BookingModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

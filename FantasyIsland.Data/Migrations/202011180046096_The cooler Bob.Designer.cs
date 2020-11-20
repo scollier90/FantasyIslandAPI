@@ -7,13 +7,13 @@ namespace FantasyIsland.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class ThecoolerBob : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ThecoolerBob));
         
         string IMigrationMetadata.Id
         {
-            get { return "202011040137161_InitialCreate"; }
+            get { return "202011180046096_The cooler Bob"; }
         }
         
         string IMigrationMetadata.Source

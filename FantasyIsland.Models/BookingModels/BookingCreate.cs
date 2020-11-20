@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FantasyIsland.Models.BookingModels
+namespace FantasyIsland.Models
 {
-    public class DestCreate
+    public class BookingCreate
     {
+        public string UserId { get; set; }
         [Required]
         public int DestId { get; set; }
         [Required]
-        public string DestName { get; set; }
-        [Required]
-        public int GenreId { get; set; }
-       
+        public int TransId { get; set; }
     }
 }

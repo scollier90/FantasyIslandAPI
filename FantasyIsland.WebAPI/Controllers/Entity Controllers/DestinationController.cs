@@ -1,4 +1,4 @@
-﻿using FantasyIsland.Models.DestinationModels;
+﻿using FantasyIsland.Models.BookingModels;
 using FantasyIsland.Services;
 using System;
 ﻿using System;

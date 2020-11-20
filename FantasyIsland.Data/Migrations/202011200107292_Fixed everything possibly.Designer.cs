@@ -7,13 +7,13 @@ namespace FantasyIsland.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class TestMigration : IMigrationMetadata
+    public sealed partial class Fixedeverythingpossibly : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(TestMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Fixedeverythingpossibly));
         
         string IMigrationMetadata.Id
         {
-            get { return "202011130035355_Test Migration"; }
+            get { return "202011200107292_Fixed everything possibly"; }
         }
         
         string IMigrationMetadata.Source

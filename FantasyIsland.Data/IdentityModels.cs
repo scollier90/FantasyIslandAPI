@@ -38,6 +38,7 @@ namespace FantasyIsland.Data
         //public DbSet<Admin> Admins { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Transportation> Transportations { get; set; }
+        public DbSet<Booking> Bookings { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -49,6 +50,12 @@ namespace FantasyIsland.Data
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
+
+            modelBuilder
+                .Entity<Booking>()
+                .HasRequired<Transportation>(b => b.Transportation)
+                .WithMany()
+                .WillCascadeOnDelete(false);
         }
 
         public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>

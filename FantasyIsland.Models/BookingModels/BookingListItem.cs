@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FantasyIsland.Models.BookingModels
+namespace FantasyIsland.Models
 {
-    public class DestListItem
+    public class BookingListItem
     {
         public int DestId { get; set; }
         public string DestName { get; set; }
-        public int GenreId { get; set; }
+
+        public int TransId { get; set; }
+        public string TransType { get; set; }
     }
 }

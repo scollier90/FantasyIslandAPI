@@ -7,13 +7,13 @@ namespace FantasyIsland.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class RequiredvirtualGenreofDestinationCommentedoutAdminandGuest : IMigrationMetadata
+    public sealed partial class removednullables : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(RequiredvirtualGenreofDestinationCommentedoutAdminandGuest));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(removednullables));
         
         string IMigrationMetadata.Id
         {
-            get { return "202011130112291_Required virtual Genre of Destination. Commented out Admin and Guest"; }
+            get { return "202011200217078_removed nullables"; }
         }
         
         string IMigrationMetadata.Source

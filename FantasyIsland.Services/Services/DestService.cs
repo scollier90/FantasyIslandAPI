@@ -1,6 +1,6 @@
 ﻿using FantasyIsland.Data;
 using FantasyIsland.Models;
-using FantasyIsland.Models.DestinationModels;
+using FantasyIsland.Models.BookingModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

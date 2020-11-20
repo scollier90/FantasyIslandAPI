@@ -91,17 +91,21 @@
     <Compile Include="Entities\Destination.cs" />
     <Compile Include="Entities\Genre.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202011040137161_InitialCreate.cs" />
-    <Compile Include="Migrations\202011040137161_InitialCreate.designer.cs">
-      <DependentUpon>202011040137161_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202011180046096_The cooler Bob.cs" />
+    <Compile Include="Migrations\202011180046096_The cooler Bob.designer.cs">
+      <DependentUpon>202011180046096_The cooler Bob.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011130035355_Test Migration.cs" />
-    <Compile Include="Migrations\202011130035355_Test Migration.designer.cs">
-      <DependentUpon>202011130035355_Test Migration.cs</DependentUpon>
+    <Compile Include="Migrations\202011200107292_Fixed everything possibly.cs" />
+    <Compile Include="Migrations\202011200107292_Fixed everything possibly.designer.cs">
+      <DependentUpon>202011200107292_Fixed everything possibly.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011130112291_Required virtual Genre of Destination. Commented out Admin and Guest.cs" />
-    <Compile Include="Migrations\202011130112291_Required virtual Genre of Destination. Commented out Admin and Guest.designer.cs">
-      <DependentUpon>202011130112291_Required virtual Genre of Destination. Commented out Admin and Guest.cs</DependentUpon>
+    <Compile Include="Migrations\202011200203307_removed cascade delete.cs" />
+    <Compile Include="Migrations\202011200203307_removed cascade delete.designer.cs">
+      <DependentUpon>202011200203307_removed cascade delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011200217078_removed nullables.cs" />
+    <Compile Include="Migrations\202011200217078_removed nullables.designer.cs">
+      <DependentUpon>202011200217078_removed nullables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,14 +116,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011040137161_InitialCreate.resx">
-      <DependentUpon>202011040137161_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011180046096_The cooler Bob.resx">
+      <DependentUpon>202011180046096_The cooler Bob.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011130035355_Test Migration.resx">
-      <DependentUpon>202011130035355_Test Migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011200107292_Fixed everything possibly.resx">
+      <DependentUpon>202011200107292_Fixed everything possibly.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011130112291_Required virtual Genre of Destination. Commented out Admin and Guest.resx">
-      <DependentUpon>202011130112291_Required virtual Genre of Destination. Commented out Admin and Guest.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011200203307_removed cascade delete.resx">
+      <DependentUpon>202011200203307_removed cascade delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011200217078_removed nullables.resx">
+      <DependentUpon>202011200217078_removed nullables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

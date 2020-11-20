@@ -15,7 +15,7 @@ namespace FantasyIsland.Data
         public int BookingId { get; set; }
 
         [ForeignKey(nameof(ApplicationUser))]
-        public int UserId { get; set; }
+        public string Id { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
 
         [ForeignKey(nameof(Destination))]
